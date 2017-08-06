@@ -1,24 +1,19 @@
-<div class="header">
-  <div class="for-sticky">
-    <!--LOGO-->
-    <div class="col-md-2 col-xs-6 logo">
-      <a [routerLink]="['../home']"><img alt="logo" class="logo-nav" [src]="logo"></a>
-    </div>
-    <!--/.LOGO END-->
-  </div>
-</div>
-<div class="navbar float-right navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
+<nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar"
+    aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  <a class="nav-brand" [routerLink]="['/home']">
+          <img alt="logo" class="logo-nav" [src]="logo">
+  </a>
+
+  <div class="collapse navbar-collapse justify-content-md-end" id="containerNavbar">
+    <ul class="navbar-nav">
       <a class="navbar-brand" [routerLink]="['/home']">首頁</a>
+      <a class="navbar-brand" [routerLink]="['/news']">最新消息</a>
       <a class="navbar-brand" [routerLink]="['/about']">關於我們</a>
       <a class="navbar-brand" [routerLink]="['/contact']">連絡方式</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://github.com/mlaval/angular2-bootstrap">Github</a></li>
-      </ul>
-    </div>
+    </ul>
   </div>
-</div>
+</nav>
 <router-outlet></router-outlet>
